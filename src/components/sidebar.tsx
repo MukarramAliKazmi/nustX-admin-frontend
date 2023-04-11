@@ -4,6 +4,7 @@ import LogoutButton from "@/components/logout-button";
 const Sidebar = () => {
   return (
     <div className="flex flex-col w-64 px-8 py-8">
+      <SidebarItem title="Dashboard" route="/" />
       <SidebarItem title="Students" route="/students" />
       <SidebarItem title="Teachers" route="/teachers" />
       <SidebarItem title="Courses" route="/courses" />
