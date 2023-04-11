@@ -1,6 +1,6 @@
 const LogoutButton = () => {
   return (
-    <button className="flex items-center w-full font-semibold text-sky-600">
+    <button className="flex items-center w-full font-semibold text-sky-500">
       Logout
     </button>
   );

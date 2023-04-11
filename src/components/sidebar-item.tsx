@@ -11,8 +11,10 @@ const SidebarItem = ({ title, route }: SidebarItem) => {
   return (
     <Link
       href={route}
-      className={`flex items-center p-4 text-gray-800 border-l-2 ${
-        router.pathname === route ? "text-sky-600 border-sky-600" : "border-gray-200 hover:border-gray-400 hover:text-black"
+      className={`flex items-center p-4 border-l-2 ${
+        router.pathname === route
+          ? "text-sky-500 border-sky-500"
+          : "border-gray-200 hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-500"
       }`}
     >
       {title}
