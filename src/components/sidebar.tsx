@@ -1,31 +1,13 @@
 import SidebarItem from "@/components/sidebar-item";
 import LogoutButton from "@/components/logout-button";
 
-const sidebarItems = [
-  {
-    title: "Students",
-    route: "/students",
-  },
-  {
-    title: "Teachers",
-    route: "/teachers",
-  },
-  {
-    title: "Disciplines",
-    route: "/disciplines",
-  },
-  {
-    title: "Courses",
-    route: "/courses",
-  },
-];
-
 const Sidebar = () => {
   return (
-    <div className="flex flex-col w-64 bg-white px-8 py-8">
-      {sidebarItems.map((item, index) => (
-        <SidebarItem key={index} item={item} />
-      ))}
+    <div className="flex flex-col w-64 px-8 py-8">
+      <SidebarItem title="Students" route="/students" />
+      <SidebarItem title="Teachers" route="/teachers" />
+      <SidebarItem title="Courses" route="/courses" />
+      <SidebarItem title="Disciplines" route="/disciplines" />
       <div className="flex-1" />
       <LogoutButton />
     </div>
