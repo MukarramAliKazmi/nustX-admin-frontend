@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Topbar />
       <div className="flex flex-1">
         <Sidebar />
-        <div className="h-full w-full overflow-y-auto p-6 border-l border-t rounded-tl-3xl border-gray-200 dark:border-gray-800">
+        <div className="h-[calc(100vh-5rem)] w-full overflow-y-auto overflow-x-hidden p-6 border-l border-t rounded-tl-3xl border-gray-200 dark:border-gray-800">
           {children}
         </div>
       </div>
