@@ -7,11 +7,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col h-screen bg-white dark:bg-slate-950">
+    <div className="flex flex-col h-screen bg-white dark:bg-slate-950 transition-colors">
       <Topbar />
       <div className="flex flex-1">
         <Sidebar />
-        <div className="h-[calc(100vh-5rem)] w-full overflow-y-auto overflow-x-hidden p-6 border-l border-t rounded-tl-3xl border-gray-200 dark:border-gray-800">
+        <div className="h-[calc(100vh-5rem)] w-full overflow-y-auto overflow-x-hidden p-6 border-l border-t rounded-tl-3xl border-gray-200 dark:border-gray-800 transition-[border]">
           {children}
         </div>
       </div>
