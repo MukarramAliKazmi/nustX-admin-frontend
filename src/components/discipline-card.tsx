@@ -16,7 +16,7 @@ const DisciplineCard: React.FC<DisciplineCardProps> = ({
   courses,
 }) => {
   return (
-    <div className=" rounded-3xl overflow-hidden p-4 border border-gray-200 dark:border-gray-800 ">
+    <div className=" rounded-3xl overflow-hidden p-4 border border-gray-200 dark:border-gray-800 duration-500 transition-[border] cursor-pointer">
       <div className="text-sky-500 font-bold text-xl mb-4">{name}</div>
       <ul className=" text-base flex flex-col gap-1">
         <li>Semesters: {semesters}</li>
