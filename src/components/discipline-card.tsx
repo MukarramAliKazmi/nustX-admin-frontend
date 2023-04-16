@@ -8,21 +8,15 @@ interface DisciplineCardProps {
   courses: number;
 }
 
-const DisciplineCard: React.FC<DisciplineCardProps> = ({
-  name,
-  semesters,
-  students,
-  teachers,
-  courses,
-}) => {
+const DisciplineCard: React.FC<DisciplineCardProps> = ({ ...rest }) => {
   return (
-    <div className=" rounded-3xl overflow-hidden p-4 border border-gray-200 dark:border-gray-800 duration-500 transition-[border] cursor-pointer">
-      <div className="text-sky-500 font-bold text-xl mb-4">{name}</div>
-      <ul className=" text-base flex flex-col gap-1">
-        <li>Semesters: {semesters}</li>
-        <li>Students: {students}</li>
-        <li>Teachers: {teachers}</li>
-        <li>Courses: {courses}</li>
+    <div className="p-4 overflow-hidden border border-gray-200 dark:border-gray-800 rounded-3xl transition-[border,transform] duration-500 cursor-pointer md:hover:scale-105">
+      <div className="text-sky-500 font-bold text-xl mb-4">{rest.name}</div>
+      <ul className="flex flex-col gap-1">
+        <li>Semesters: {rest.semesters}</li>
+        <li>Students: {rest.students}</li>
+        <li>Teachers: {rest.teachers}</li>
+        <li>Courses: {rest.courses}</li>
       </ul>
     </div>
   );

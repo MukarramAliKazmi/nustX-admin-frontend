@@ -1,4 +1,3 @@
-import { RootState, useAppSelector } from "@/store/store";
 import Sidebar from "@/components/sidebar";
 import Topbar from "@/components/topbar";
 
@@ -7,14 +6,14 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const isOpen = useAppSelector((state: RootState) => state.sidebar.isOpen);
-
   return (
-    <div className="flex flex-col h-screen bg-white dark:bg-slate-950 duration-500 transition-colors">
+    <div className="w-screen h-screen flex flex-col bg-white dark:bg-slate-950 transition-colors duration-500">
       <Topbar />
-      <div className="flex flex-1 relative bg-inherit">
+      <div className="w-full h-full flex grid-cols-[auto_auto] relative bg-inherit overflow-x-hidden">
         <Sidebar />
-        <div className={`h-[calc(100vh-5rem)] overflow-y-auto overflow-x-hidden p-4 md:p-6 border-t border-gray-200 dark:border-gray-800 duration-500 transition-[border] w-full md:border-l md:w-screen md:rounded-tl-3xl ${isOpen ? "w-screen": "" }`}>
+        <div
+          className={`w-full md:w-screen h-full relative overflow-y-auto p-4 md:p-6`}
+        >
           {children}
         </div>
       </div>
