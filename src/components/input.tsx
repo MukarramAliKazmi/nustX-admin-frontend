@@ -1,5 +1,5 @@
 import React from "react";
-import useInputEvents from "@/hooks/handle-input-events";
+import useInputEvents from "@/hooks/use-input-events";
 
 type InputProps = React.HTMLProps<HTMLInputElement> & {
   label: string;
@@ -18,11 +18,11 @@ const Input = ({ label, ...rest }: InputProps) => {
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlue}
-        className={`border border-gray-200 dark:border-gray-800 w-full rounded-lg px-4 py-2 pt-6 outline-none bg-transparent focus:border-sky-500 transition-[border] ${rest.className}`}
+        className={`border border-gray-200 dark:border-gray-800 duration-500 w-full rounded-lg px-4 py-2 pt-6 outline-none bg-transparent focus:border-sky-500 transition-[border] ${rest.className}`}
       />
       <label
         htmlFor={rest.id}
-        className={`absolute left-0 px-4 text-sky-500 transition-[top] ${labelPosition}`}
+        className={`absolute left-0 px-4 text-sky-500 transition-[top] duration-500 ${labelPosition}`}
       >
         {label}
       </label>
