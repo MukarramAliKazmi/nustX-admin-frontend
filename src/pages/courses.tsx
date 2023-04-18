@@ -1,10 +1,7 @@
-import Input from "@/components/input";
 import Layout from "@/components/layout";
 
 const Courses = () => {
-  return <Layout>
-    <Input label="name" />
-  </Layout>;
+  return <Layout>Courses</Layout>;
 };
 
 export default Courses;
